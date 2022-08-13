@@ -11,7 +11,7 @@ namespace DungeonsAndDices.stats
     {
         public static List<Dice> D6DiceList = CreateDiceList<Dice>();
 
-        public static List<T> CreateDiceList<T>() where T : Dice, new()
+        public static List<T> CreateDiceList<T>() where T : Dice
         {
             var list = new List<T>();
             return list;

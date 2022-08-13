@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DungeonsAndDices.dices
 {
-    public class Dice
+    public abstract class Dice
     {
         public static double Price { get; set; }
         public static double PriceMultiplier { get; set; } = 1.15;
