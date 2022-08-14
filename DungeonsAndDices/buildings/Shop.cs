@@ -15,7 +15,7 @@ namespace DungeonsAndDices.buildings
         {
             Console.Title = "Dungeons and Dices - Shop";
             Output.WriteLine("<-- Welcome to the Shop -->");
-            string[] shopOptions = { "D6: ¢" + D6.Price + " -> " + "Own: " + DiceStats.D6DiceList.Count, "D4", "D20", "Exit"};
+            string[] shopOptions = { "D6: ¢" + D6.Price + " -> " + "Own: " + DiceStats.DiceList.Count, "D4", "D20", "Exit"};
             foreach (string shopOption in shopOptions)
             {
                 Output.WriteLine(shopOption);
@@ -29,7 +29,7 @@ namespace DungeonsAndDices.buildings
             switch (userSelection)
             {
                 case ("D6"):
-                    purchaseDice("D6", DiceStats.D6DiceList);
+                    purchaseDice("D6", DiceStats.DiceList);
                     Input.ReadLine();
                     Output.Clear();
                     ShopMenu();

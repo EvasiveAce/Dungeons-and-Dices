@@ -9,12 +9,13 @@ namespace DungeonsAndDices.stats
 {
     public static class DiceStats
     {
-        public static List<Dice> D6DiceList = CreateDiceList<Dice>();
-
+        public static List<Dice> DiceList = CreateDiceList<Dice>();
+        //Later on implment getD6Count for shop shit
         public static List<T> CreateDiceList<T>() where T : Dice
         {
             var list = new List<T>();
             return list;
         }
+
     }
 }

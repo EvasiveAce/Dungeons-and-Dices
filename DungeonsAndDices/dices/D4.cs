@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace DungeonsAndDices.dices
 {
-    public class D6 : Dice
+    public class D4 : Dice
     {
         //StartPrice
         public static double Price = 1;
-        public D6()
+        public D4()
         {
-            D6.DiceSides = 6;
-            D6.Name = "D6";
+            D4.DiceSides = 4;
         }
     }
 }

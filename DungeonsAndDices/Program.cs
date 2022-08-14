@@ -12,7 +12,10 @@ namespace DungeonsAndDices
         {
             Console.Title = "Dungeons and Dices";
             PlayerStats.Coins = 10;
-            House.HouseMenu();
+            PlayerStats.HP = 10;
+            //Shop.purchaseDice("D6", DiceStats.DiceList);
+            //House.HouseMenu();
+            FC.FCMenu();
         }
     }
 }

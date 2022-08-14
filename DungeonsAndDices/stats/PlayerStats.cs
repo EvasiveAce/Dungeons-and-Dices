@@ -9,5 +9,7 @@ namespace DungeonsAndDices.stats
     public static class PlayerStats
     {
         public static double Coins { get; set; }
+        
+        public static double HP { get; set; }
     }
 }

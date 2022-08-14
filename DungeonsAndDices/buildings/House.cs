@@ -14,7 +14,7 @@ namespace DungeonsAndDices.buildings
         {
             Console.Title = "Dungeons and Dices - Home";
             Output.WriteLine("<-- Welcome Home -->");
-            string[] houseOptions = {"Location -> Shop"};
+            string[] houseOptions = {"Location -> Shop", "Location -> Fight Club"};
             foreach (string houseOption in houseOptions)
             {
                 Output.WriteLine(houseOption);
@@ -32,9 +32,23 @@ namespace DungeonsAndDices.buildings
                     break;
                 case ("Roll"):
                     Output.Clear();
-                    foreach (var item in DiceStats.D6DiceList)
+                    foreach (var item in DiceStats.DiceList)
                     {
                         Output.WriteLine(item.Roll().ToString());
+                    }
+                    break;
+                case ("Fight Club"):
+                    if (DiceStats.DiceList.Count > 0)
+                    {
+                        Output.Clear();
+                        FC.FCMenu();
+                    }
+                    else
+                    {
+                        Output.WriteLine("You need to purchase a dice before being able to fight");
+                        Input.ReadLine();
+                        Output.Clear();
+                        House.HouseMenu();
                     }
                     break;
                 default:

@@ -9,7 +9,7 @@ namespace DungeonsAndDices.dices
         public static double Price { get; set; }
         public static double PriceMultiplier { get; set; } = 1.15;
         public static int DiceSides { get; set; }
-        
+        public static string Name { get; set; }
         
         public int Roll()
         {
@@ -17,5 +17,9 @@ namespace DungeonsAndDices.dices
             return numberGen.Next(1, DiceSides);
         }
 
+        public string GetName()
+        {
+            return Name;
+        }
     }
 }
